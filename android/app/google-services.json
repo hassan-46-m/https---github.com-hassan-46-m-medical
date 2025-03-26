@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "202156097240",
+    "project_id": "fluttermedical-29dca",
+    "storage_bucket": "fluttermedical-29dca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202156097240:android:6d68fd9b34a7b64533e1ad",
+        "android_client_info": {
+          "package_name": "com.example.intelligent_medical_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0K3BHLk2HFdr5Q2GB4LAufBRL0n_NGZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

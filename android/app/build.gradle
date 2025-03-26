@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    namespace = "com.example.intelligent_medical_system"
+    compileSdkVersion 34  // Set the appropriate SDK version
+
+    defaultConfig {
+        applicationId "com.example.intelligent_medical_system"
+        minSdkVersion 23      // Set your minimum SDK version
+        targetSdkVersion 34  // Set your target SDK version
+        versionCode 1  // Add this line
+        versionName "1.0"  // Add this line
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    ndkVersion = "23.1.7779620"  // Set your NDK version if needed
+}
+
+flutter {
+    source = "../.."
+}
