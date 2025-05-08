@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intelligent_medical_system/ui/Drug_Details/drug_details.dart';
 import 'package:intelligent_medical_system/ui/Account/account.dart';
+import 'package:intelligent_medical_system/ui/FAQ/faq_screen.dart';
 import 'package:intelligent_medical_system/ui/liked/liked_details.dart';
 import 'package:intelligent_medical_system/ui/search/searchDetails.dart';
 import 'package:intelligent_medical_system/ui/Register/login_screen.dart';
@@ -140,12 +141,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: Text(
-                        "FAQ",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                            color: AppColor.whiteColor),
+                      child: TextButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, FAQScreen.routeName);
+
+                        },
+                        child: Text(
+                          "FAQ",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: AppColor.whiteColor),
+                        ),
                       ),
                     ),
                   ),

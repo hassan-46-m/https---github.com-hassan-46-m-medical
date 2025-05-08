@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false,home: FAQScreen()));
-}
+
 
 class FAQScreen extends StatelessWidget {
+  static const String routeName = "FAQ screen";
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return (Scaffold(
 
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -15,7 +15,7 @@ class FAQScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Navigator.pop(context); // Implement navigation logic here
+            Navigator.pop(context);
           },
         ),
         title: Text(
@@ -63,7 +63,7 @@ class FAQScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ));
   }
 }
 
@@ -105,7 +105,8 @@ class FAQSection extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                 ),
                 onPressed: () {
-                  // Add action, e.g., navigate or show dialog
+
+
                   print('Tapped on: $q');
                 },
                 child: Text(
