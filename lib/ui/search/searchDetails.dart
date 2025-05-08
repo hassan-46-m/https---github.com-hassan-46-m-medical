@@ -22,14 +22,13 @@ class _SearchdetailsState extends State<Searchdetails> {
     });
 
     String url = query.isEmpty
-        ? 'https://d595-196-158-159-172.ngrok-free.app/api/'
-        : 'https://d595-196-158-159-172.ngrok-free.app/api/search/$query';
+        ? 'https://ca2c-45-101-122-117.ngrok-free.app/api'
+        : 'https://ca2c-45-101-122-117.ngrok-free.app/api/search/$query';
 
     try {
       final response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
         final decodedResponse = json.decode(response.body);
-
         if (decodedResponse is Map && decodedResponse.containsKey('data')) {
           setState(() {
             _searchResults = List.from(decodedResponse['data']).map((drug) {
@@ -40,7 +39,7 @@ class _SearchdetailsState extends State<Searchdetails> {
                 'uses': drug['Uses'] ?? 'No uses available',
                 'side_effects': drug['Side_effects'] ?? 'No side effects listed',
                 'manufacturer': drug['Manufacturer'] ?? 'Unknown manufacturer',
-                'price': drug['Price'] ?? 'Price not available',
+                'price': drug['Price (EGP)'] ?? 'Price not available',
               };
             }).toList();
           });
@@ -97,7 +96,6 @@ class _SearchdetailsState extends State<Searchdetails> {
               itemCount: _searchResults.length,
               itemBuilder: (context, index) {
                 final drug = _searchResults[index];
-
                 final String drugName = drug['name'] ?? 'Unknown';
                 final String activeIngredient = drug['ingredient'] ?? 'Not available';
                 final String imageUrl = drug['image_url'] ?? '';

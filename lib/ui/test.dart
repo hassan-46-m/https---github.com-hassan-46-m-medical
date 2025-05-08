@@ -21,7 +21,7 @@ class _DrugListScreenState extends State<DrugListScreen> {
   }
 
   Future<void> _fetchAllDrugs() async {
-    final url = Uri.parse('https://1474-196-159-72-17.ngrok-free.app/api/');
+    final url = Uri.parse('https://gradproject-production.up.railway.app/api/');
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {

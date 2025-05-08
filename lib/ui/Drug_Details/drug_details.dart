@@ -25,7 +25,7 @@ class _AllDrugsScreenState extends State<AllDrugsScreen> {
   Future<void> _fetchDrugs() async {
     try {
       final response = await http
-          .get(Uri.parse('https://d595-196-158-159-172.ngrok-free.app/api/'));
+          .get(Uri.parse('https://ca2c-45-101-122-117.ngrok-free.app/api'));
 
       if (response.statusCode == 200) {
         final decodedResponse = json.decode(response.body);
@@ -89,7 +89,7 @@ class _AllDrugsScreenState extends State<AllDrugsScreen> {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text(
-                          'Manufacturer: ${drug['Manufacturer'] ?? 'Not available'}\nPrice: ${drug['Price'] ?? 'N/A'}',
+                          'Manufacturer: ${drug['Manufacturer'] ?? 'Not available'}\nPrice: ${drug['Price (EGP)'] ?? 'N/A'}',
                         ),
                         leading: ClipRRect(
                           borderRadius: BorderRadius.circular(8),
@@ -138,7 +138,6 @@ class DrugDetails extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // عرض صورة الدواء
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
@@ -176,7 +175,7 @@ class DrugDetails extends StatelessWidget {
                   _buildDetailRow('Uses:', drug['Uses']),
                   _buildDetailRow('Side Effects:', drug['Side_effects']),
                   _buildDetailRow('Manufacturer:', drug['Manufacturer']),
-                  _buildDetailRow('Price:', drug['Price']),
+                  _buildDetailRow('Price:', drug['Price (EGP)']),
                 ],
               ),
             ),

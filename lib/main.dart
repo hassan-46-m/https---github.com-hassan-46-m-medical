@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         SignupScreen.routeName: (context) => SignupScreen(),
       },
       debugShowCheckedModeBanner: false,
+
       initialRoute: SplashScreen.routeName,
     );
   }
