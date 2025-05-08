@@ -5,6 +5,7 @@ import 'package:intelligent_medical_system/ui/Register/login_screen.dart';
 import 'package:intelligent_medical_system/ui/Register/signup_screen.dart';
 import 'package:intelligent_medical_system/ui/Splash/splash_screen.dart';
 import 'package:intelligent_medical_system/ui/FAQ/faq_screen.dart';
+import 'package:intelligent_medical_system/ui/Chat/chat_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.routeName: (context) => LoginScreen(),
         SignupScreen.routeName: (context) => SignupScreen(),
         FAQScreen.routeName: (context) => FAQScreen(),
+        ChatScreen.routeName: (context) => ChatScreen(),
 
       },
       debugShowCheckedModeBanner: false,

@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const PharmaBotApp());
-}
 
 class PharmaBotApp extends StatelessWidget {
+
   const PharmaBotApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const ChatScreen(),
-      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -19,6 +16,7 @@ class PharmaBotApp extends StatelessWidget {
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
+  static const String routeName = "Chat Screen";
 
   @override
   Widget build(BuildContext context) {
